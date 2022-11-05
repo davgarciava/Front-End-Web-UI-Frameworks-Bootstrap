@@ -32,3 +32,12 @@
 .aboutus {
     padding: 50px 0px 50px 0px;
 }
+
+body {
+    padding: 50px 0px 0px 0px;
+    z-index: 0;
+}
+
+.navbar-dark {
+    background-color: #bf742a;
+}
