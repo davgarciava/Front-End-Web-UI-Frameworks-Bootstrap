@@ -31,7 +31,7 @@
                     <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contacto</a></li>
                 </ul>
                 <span class="navbar-text">
-                    <a class="nav-link" data-toggle="modal" data-target="#loginModal">
+                    <a class="nav-link" id="triggerLoginModal">
                         <span class="fa fa-sign-in"></span> Login
                     </a>
                 </span>
@@ -160,10 +160,7 @@
                     <img src="img/logo.png" class="img-fluid">
                 </div>
                 <div class="col-12 col-sm-3 align-self-center">
-                    <a role="button" class="btn btn-warning nav-link btn-block"
-                        data-toggle="modal" data-target="#reserveModal">
-                        Reserve Table
-                    </a>
+                    <a role="button" class="btn btn-warning nav-link btn-block" id="triggerReserveModal">Reserve Table</a>
                     <!-- TOOLTIP_BUTTON:
                     <a role="button" class="btn btn-warning nav-link btn-block"
                         data-toggle="tooltip" data-html="true"
@@ -404,6 +401,17 @@
                     $("#carouselButton").children("span").removeClass('fa-play');
                     $("#carouselButton").children("span").addClass('fa-pause');                    
                 }
+            });
+        });
+    </script>
+        
+    <script>
+        $(document).ready(function(){
+            $("#triggerLoginModal").click(function(){
+                $('#loginModal').modal('toggle');
+            });
+            $("#triggerReserveModal").click(function(){
+                $('#reserveModal').modal('toggle');
             });
         });
     </script>
